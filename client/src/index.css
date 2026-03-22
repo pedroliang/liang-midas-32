@@ -133,6 +133,34 @@
   }
 }
 
+/* Fader styles */
+.fader-vertical {
+  -webkit-appearance: slider-vertical;
+  writing-mode: vertical-lr;
+  direction: rtl;
+  width: 28px;
+  height: 160px;
+  cursor: pointer;
+}
+
+/* LED indicator */
+.led {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.led-green { background: oklch(0.65 0.22 145); box-shadow: 0 0 6px oklch(0.65 0.22 145); }
+.led-red { background: oklch(0.55 0.25 25); box-shadow: 0 0 6px oklch(0.55 0.25 25); }
+.led-yellow { background: oklch(0.8 0.18 85); box-shadow: 0 0 6px oklch(0.8 0.18 85); }
+.led-off { background: oklch(0.2 0.01 240); }
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: oklch(0.14 0.01 240); }
+::-webkit-scrollbar-thumb { background: oklch(0.3 0.02 240); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: oklch(0.4 0.02 240); }
+
 @layer components {
   /**
    * Custom container utility that centers content and adds responsive padding.
